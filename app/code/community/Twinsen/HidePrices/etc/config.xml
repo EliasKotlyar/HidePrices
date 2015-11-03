@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Twinsen_HidePrices>
+            <version>1.0.0</version>
+        </Twinsen_HidePrices>
+    </modules>
+    <global>
+        <blocks>
+            <Twinsen_HidePrices>
+                <class>Twinsen_DasIstFashion_Block</class>
+            </Twinsen_HidePrices>
+
+
+            <magesetup>
+                <rewrite>
+                    <catalog_product_price>Twinsen_HidePrices_Block_Product_Price</catalog_product_price>
+                </rewrite>
+            </magesetup>
+
+
+
+
+        </blocks>
+        <models>
+            <Twinsen_DasIstFashion>
+                <class>Twinsen_HidePrices_Model</class>
+            </Twinsen_DasIstFashion>
+        </models>
+
+        <events>
+            <catalog_product_is_salable_after>
+                <observers>
+                    <modulename>
+                        <type>singleton</type>
+                        <class>Twinsen_HidePrices_Model_Observer</class>
+                        <method>catalog_product_is_salable_after</method>
+                    </modulename>
+                </observers>
+            </catalog_product_is_salable_after>
+        </events>
+
+    </global>
+</config>

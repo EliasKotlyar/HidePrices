@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Twinsen_HidePrices>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <FireGento_MageSetup/>
+            </depends>
+        </Twinsen_HidePrices>
+    </modules>
+</config>
